@@ -49,7 +49,7 @@ nav .nav-links li {
   width: 5px;
   height: 38px;
   left: 200px;
-  top: 20px;
+  top: 22px;
   background: #FFFFFF;
 }
 
@@ -224,5 +224,51 @@ button::hover {
 .github {
   font-size: 30px;
   position: absolute;
+}
+
+/*
+*   Post pages
+*/
+.posts-wrapper {
+  min-height: 500px;
+}
+
+.post {
+  background-color: #0F0F1F;
+  width: 100%;
+  border-radius: 14px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.posts-heading {
+  font-size: 40px;
+}
+
+.posts-label {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(111, 66, 245, 0.33);
+  border-radius: 5px;
+}
+
+.label-wrapper {
+  display: table;
+  height: 12%;
+  overflow: hidden;
+  width: 12%;
+}
+
+.post-footer button {
+  width: 160px;
+  height: 34px;
+  border: none;
+  color: white;
+  background: #151529;
+  border-radius: 7.82353px;
 }
 /*# sourceMappingURL=app.css.map */
