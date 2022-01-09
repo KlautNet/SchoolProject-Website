@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom"
+
+
 function Header() {
     return (
         <div className="header">
@@ -8,8 +11,12 @@ function Header() {
             </div>
             <div className="columns">
                 <div className="column header-buttons">
-                    <button className="btn-primary">Start</button>
-                    <button className="btn-secondary">Explore</button>
+                    <div className="btn-wrapper">
+                        <NavLink to={"/post/6"} className="btn-primary">Start</NavLink>
+                    </div>
+                    <div className="btn-wrapper-secondary">
+                        <NavLink to="/posts" className="btn-secondary">Explore</NavLink>
+                    </div>
                 </div>
             </div>
         </div>

@@ -75,7 +75,7 @@ nav .nav-links li {
   color: #524B54;
 }
 
-.btn-primary {
+.btn-wrapper {
   border: none;
   width: 175px;
   height: 50px;
@@ -87,7 +87,7 @@ nav .nav-links li {
   color: white;
 }
 
-.btn-secondary {
+.btn-wrapper-secondary {
   border: none;
   width: 175px;
   height: 50px;
@@ -248,19 +248,40 @@ button::hover {
 .posts-label {
   display: table-cell;
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   background: rgba(111, 66, 245, 0.33);
   border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .label-wrapper {
   display: table;
-  height: 12%;
-  overflow: hidden;
-  width: 12%;
+  padding: 10px;
+}
+
+.post-date {
+  margin-left: 20px;
+}
+
+.post-content h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post-content p {
+  margin-top: 5px;
+}
+
+.post-content-wrapper {
+  margin: 10px;
+}
+
+.post-footer {
+  margin-left: 10px;
 }
 
 .post-footer button {
@@ -270,5 +291,57 @@ button::hover {
   color: white;
   background: #151529;
   border-radius: 7.82353px;
+}
+
+.post-footer .author-link {
+  color: #6F42F5;
+}
+
+.post-content-link {
+  color: white;
+}
+
+.post-content-link:hover {
+  color: white;
+}
+
+.postpage-post {
+  margin-top: 5%;
+  min-height: 570px;
+}
+
+.postpage-post-header {
+  font-size: 15px;
+}
+
+.postpage-post-category {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.postpage-post-date {
+  color: #524B54;
+}
+
+.postpage-post-content {
+  margin-top: 2%;
+}
+
+.postpage-post-content h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.postpage-post-footer {
+  margin-top: 5%;
+}
+
+.postpage-link {
+  color: #6F42F5;
+  padding-right: 20px;
+}
+
+.postpage-post-content .center {
+  text-align: center;
 }
 /*# sourceMappingURL=app.css.map */

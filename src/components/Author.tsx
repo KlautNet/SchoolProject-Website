@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useParams } from "react-router-dom"
 import IPost from "../interfaces/IPost"
 
 export interface Props {
@@ -7,18 +7,22 @@ export interface Props {
     fetchError: string,
 }
 
-export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) => {
-    console.log(posts)
+export const Author : React.FC<Props> = ({fetchError, isLoading, posts}: Props) => {
+    
+    const {author} = useParams();
+    const author_posts = posts.filter((post:IPost) => post.author === author);
+    console.log(author_posts);
+
     return (
         <div className="posts-wrapper">
             <div className="columns">
                 <div className="column"></div>
                 <div className="column">
-                    <h1 className="posts-heading">Posts [{posts.length}]</h1>
+                    <h1 className="posts-heading">{author} - Posts [{author_posts.length}]</h1>
                         {isLoading && <div className="notification is-primary"><p>Loading Posts... </p></div>}
                         {fetchError && <div className="notification is-danger"><p>{`Error: ${fetchError}`}</p></div>}
                     {
-                        posts.map((post: IPost) => (
+                        author_posts.map((post: IPost) => (
                             <div className="post" key={post.id}>
                                 <div className="post-header">
                                     <div className="label-wrapper">
@@ -33,14 +37,13 @@ export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) =>
                                             {/**
                                              * <p>{post.content.split(' ').slice(0, 20).join(' ')}...</p>
                                              */}
-                                             <p>{post.content}</p>
                                         </div>
                                     </NavLink>
                                 </div>  
                                
                                 <div className="post-footer">
                                     
-                                    <NavLink className="author-link" to={`/author/${post.author}`}>Written by {post.author}</NavLink>
+                                    <NavLink className="author-link" to={`/post/${post.id}`}>Read full post</NavLink>
                                 </div>
                             </div>
                         ))}
@@ -51,5 +54,4 @@ export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) =>
         </div>  
     )
 }
-
 
