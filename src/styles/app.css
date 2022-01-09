@@ -341,7 +341,38 @@ button::hover {
   padding-right: 20px;
 }
 
+.postpage-post-content-injected {
+  margin-top: 5%;
+}
+
 .postpage-post-content .center {
   text-align: center;
+}
+
+.postpage-post-content .icon:hover {
+  cursor: pointer;
+}
+
+.postpage-post-content p {
+  font-size: 20px;
+}
+
+.postpage-post-content .quote {
+  color: #524B54;
+  letter-spacing: -1px;
+}
+
+.postpage-post-content img {
+  border-radius: 12px;
+  width: 100%;
+}
+
+.postpage-post-content a {
+  font-size: 20px;
+  color: #6F42F5;
+}
+
+.postpage-post-content iframe {
+  width: 100%;
 }
 /*# sourceMappingURL=app.css.map */

@@ -43,7 +43,6 @@ function App() {
   }, []);
 
   const getPost = (postID:number) => {
-      console.log("Posts: " + posts)
       posts.map((post:IPost) => {
         if(typeof post != undefined && post.id === postID) {
           let cPost = {id: post.id, content: post.content, author: post.author, created_at: post.created_at, category: post.category, title: post.title} as IPost;

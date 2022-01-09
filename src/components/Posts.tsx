@@ -39,7 +39,6 @@ export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) =>
                                 </div>  
                                
                                 <div className="post-footer">
-                                    
                                     <NavLink className="author-link" to={`/author/${post.author}`}>Written by {post.author}</NavLink>
                                 </div>
                             </div>

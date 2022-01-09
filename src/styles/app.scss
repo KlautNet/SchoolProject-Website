@@ -344,8 +344,33 @@ button::hover {
 
 //Styles for injected html
 
+.postpage-post-content-injected {
+    margin-top: 5%;
+}
+
 .postpage-post-content {
     .center {
         text-align: center;
+    }
+    .icon:hover {
+        cursor: pointer;
+    }
+    p {
+        font-size: 20px;
+    }
+    .quote {
+        color: $font-secondary;
+        letter-spacing: -1px;
+    }
+    img {
+        border-radius: 12px;
+        width: 100%;
+    }
+    a {
+        font-size: 20px;
+        color: $higlight;
+    }
+    iframe {
+        width: 100%;
     }
 }
