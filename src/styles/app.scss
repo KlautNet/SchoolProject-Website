@@ -91,41 +91,34 @@ nav {
     border-radius: 14px;
     font-size: 20px;
     color: white;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: center;
+	align-items: center;
+    display: flex;
 }
 
-.btn-wrapper-secondary {
-    border: none;
-    width: 175px;
-    height: 50px;
-    background-color: $secondary;
-    box-shadow: 0px 4px 4px rgba(22, 22, 44, 0.25);
-    border-radius: 14px;
-    font-size: 20px;
+.btn-primary {
     color: white;
 }
 
-.btn-secondary {
-
+.btn-primary:hover {
+    color: white;
 }
 
-button::hover {
-    cursor: pointer;
-}
-
-.header-buttons {
-    margin-top: 20px;
-    .btn-primary {
-        margin-right: 20px;
-    }
-    .btn-secondary {
-        margin-left: 20px;
-    }
-}
 
 
 /*
 *    Content
 */
+
+.category-link {
+    color: white;
+}
+
+.category-link:hover {
+    color: $higlight;
+}
 
 .tools-content {
     background-color: $secondary;
@@ -349,6 +342,10 @@ button::hover {
 }
 
 .postpage-post-content {
+    h3 {
+        font-size: 25px;
+        font-weight: bold;
+    }
     .center {
         text-align: center;
     }
@@ -373,4 +370,45 @@ button::hover {
     iframe {
         width: 100%;
     }
+    ul {
+        list-style-type: disc;
+        margin-left: 2%;
+    }
+    li {
+        font-size: 18px;
+    }
+    .quote-wrapper {
+        background: $secondary;
+        border-radius: 12px;
+        p {
+            padding: 10px;
+            letter-spacing: -1px;
+        }
+    }
+    strong {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+
+.postpage {
+    min-height: 570px;
+}
+
+.github-link {
+    color: white;
+}
+
+.impressum-wrapper {
+    text-align: center;
+    h1 {
+        margin-top: 30px;
+        font-weight: bold;
+        font-size: 45px;
+    }
+    p {
+        font-size: 20px;
+    }
+    min-height: 540px;
 }

@@ -9,6 +9,8 @@ import { PostPage } from './components/PostPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import IPost from './interfaces/IPost';
 import { Author } from './components/Author';
+import { Impressum } from './components/Impressum';
+import { Category } from './components/Category';
 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:1087/api/getPosts');
+        const response = await fetch('http://45.82.122.235:3030/api/getPosts');
         if(!response.ok) throw Error('Did not recieve expected data');
         const posts = await response.json();
         setPosts(posts);
@@ -36,10 +38,8 @@ function App() {
         setIsLoading(false);
       }
     }
-    setTimeout(() => {
+      window.scrollTo(0, 0)
       fetchPosts();
-    }, 2000)
-
   }, []);
 
   const getPost = (postID:number) => {
@@ -66,6 +66,8 @@ function App() {
               <Route path="/posts" element={<Posts posts={posts} fetchError={fetchError} isLoading={isLoading}/>} />
               <Route path="/post/:id" element={ <PostPage posts={posts} fetchError={fetchError} isLoading={isLoading} post={post} getPost={getPost}/>} />   
               <Route path="/author/:author" element={<Author posts={posts} fetchError={fetchError} isLoading={isLoading}/>}/>
+              <Route path="/category/:category" element={<Category posts={posts} fetchError={fetchError} isLoading={isLoading}/>}/>
+              <Route path="/impressum" element={<Impressum/>} />
             </Routes> 
           </main>
         <Footer />

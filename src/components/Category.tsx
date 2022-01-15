@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useParams } from "react-router-dom"
 import IPost from "../interfaces/IPost"
 
 export interface Props {
@@ -7,17 +7,21 @@ export interface Props {
     fetchError: string,
 }
 
-export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) => {
+export const Category : React.FC<Props> = ({fetchError, isLoading, posts}: Props) => {
+    
+    const {category} = useParams();
+    const category_posts = posts.filter((post:IPost) => post.category === category);
+
     return (
         <div className="posts-wrapper">
             <div className="columns">
                 <div className="column"></div>
                 <div className="column">
-                    <h1 className="posts-heading">Posts [{posts.length}]</h1>
+                    <h1 className="posts-heading">{category} - Posts [{category_posts.length}]</h1>
                         {isLoading && <div className="notification is-primary"><p>Lade Posts... </p></div>}
                         {fetchError && <div className="notification is-danger"><p>{`Fehler: ${fetchError}`}</p></div>}
                     {
-                        posts.map((post: IPost) => (
+                        category_posts.map((post: IPost) => (
                             <div className="post" key={post.id}>
                                 <div className="post-header">
                                     <div className="label-wrapper">
@@ -37,7 +41,8 @@ export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) =>
                                 </div>  
                                
                                 <div className="post-footer">
-                                    <NavLink className="author-link" to={`/author/${post.author}`}>Verfasst von {post.author}</NavLink>
+                                    
+                                    <NavLink className="author-link" to={`/post/${post.id}`}>Ganzen Post lesen</NavLink>
                                 </div>
                             </div>
                         ))}
@@ -48,5 +53,4 @@ export const Posts: React.FC<Props> = ({posts, fetchError, isLoading}: Props) =>
         </div>  
     )
 }
-
 

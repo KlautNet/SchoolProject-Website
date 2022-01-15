@@ -11,7 +11,6 @@ export const Author : React.FC<Props> = ({fetchError, isLoading, posts}: Props) 
     
     const {author} = useParams();
     const author_posts = posts.filter((post:IPost) => post.author === author);
-    console.log(author_posts);
 
     return (
         <div className="posts-wrapper">
@@ -19,8 +18,8 @@ export const Author : React.FC<Props> = ({fetchError, isLoading, posts}: Props) 
                 <div className="column"></div>
                 <div className="column">
                     <h1 className="posts-heading">{author} - Posts [{author_posts.length}]</h1>
-                        {isLoading && <div className="notification is-primary"><p>Loading Posts... </p></div>}
-                        {fetchError && <div className="notification is-danger"><p>{`Error: ${fetchError}`}</p></div>}
+                        {isLoading && <div className="notification is-primary"><p>Lade Posts... </p></div>}
+                        {fetchError && <div className="notification is-danger"><p>{`Fehler: ${fetchError}`}</p></div>}
                     {
                         author_posts.map((post: IPost) => (
                             <div className="post" key={post.id}>
@@ -43,7 +42,7 @@ export const Author : React.FC<Props> = ({fetchError, isLoading, posts}: Props) 
                                
                                 <div className="post-footer">
                                     
-                                    <NavLink className="author-link" to={`/post/${post.id}`}>Read full post</NavLink>
+                                    <NavLink className="author-link" to={`/post/${post.id}`}>Ganzen Post lesen</NavLink>
                                 </div>
                             </div>
                         ))}

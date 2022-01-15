@@ -5,20 +5,18 @@ function Header() {
     return (
         <div className="header">
             <div className="header-headings">
-                <h1>My Recursion learning path</h1>
-                <p>During the last half year I learned a lot about the concept of Recursion
-                <br></br>Click start to accompany me on my journey </p>
+                <h1>Mein Rekursions-Lernpfad</h1>
+                <p>Während der letzten Unterrichtseinheit habe ich viel über das Konzept der Rekursion gelernt
+                <br></br>Drücke start um mich auf meiner Reise zu begleiten </p>
             </div>
-            <div className="columns">
-                <div className="column header-buttons">
+
+            <div className="header-wrapper">
                     <div className="btn-wrapper">
-                        <NavLink to={"/post/6"} className="btn-primary">Start</NavLink>
+                        <NavLink to={"/post/3"} className="btn-primary">Start</NavLink>
                     </div>
-                    <div className="btn-wrapper-secondary">
-                        <NavLink to="/posts" className="btn-secondary">Explore</NavLink>
-                    </div>
-                </div>
-            </div>
+                   
+            </div>  
+                
         </div>
     )
 }

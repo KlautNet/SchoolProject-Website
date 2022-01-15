@@ -85,39 +85,38 @@ nav .nav-links li {
   border-radius: 14px;
   font-size: 20px;
   color: white;
+  margin: auto;
+  margin-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.btn-wrapper-secondary {
-  border: none;
-  width: 175px;
-  height: 50px;
-  background-color: #151529;
-  -webkit-box-shadow: 0px 4px 4px rgba(22, 22, 44, 0.25);
-          box-shadow: 0px 4px 4px rgba(22, 22, 44, 0.25);
-  border-radius: 14px;
-  font-size: 20px;
+.btn-primary {
   color: white;
 }
 
-button::hover {
-  cursor: pointer;
-}
-
-.header-buttons {
-  margin-top: 20px;
-}
-
-.header-buttons .btn-primary {
-  margin-right: 20px;
-}
-
-.header-buttons .btn-secondary {
-  margin-left: 20px;
+.btn-primary:hover {
+  color: white;
 }
 
 /*
 *    Content
 */
+.category-link {
+  color: white;
+}
+
+.category-link:hover {
+  color: #6F42F5;
+}
+
 .tools-content {
   background-color: #151529;
   height: 300px;
@@ -345,6 +344,11 @@ button::hover {
   margin-top: 5%;
 }
 
+.postpage-post-content h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .postpage-post-content .center {
   text-align: center;
 }
@@ -374,5 +378,52 @@ button::hover {
 
 .postpage-post-content iframe {
   width: 100%;
+}
+
+.postpage-post-content ul {
+  list-style-type: disc;
+  margin-left: 2%;
+}
+
+.postpage-post-content li {
+  font-size: 18px;
+}
+
+.postpage-post-content .quote-wrapper {
+  background: #151529;
+  border-radius: 12px;
+}
+
+.postpage-post-content .quote-wrapper p {
+  padding: 10px;
+  letter-spacing: -1px;
+}
+
+.postpage-post-content strong {
+  color: white;
+  font-weight: bold;
+}
+
+.postpage {
+  min-height: 570px;
+}
+
+.github-link {
+  color: white;
+}
+
+.impressum-wrapper {
+  text-align: center;
+  min-height: 540px;
+}
+
+.impressum-wrapper h1 {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.impressum-wrapper p {
+  font-size: 20px;
 }
 /*# sourceMappingURL=app.css.map */
