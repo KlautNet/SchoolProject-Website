@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://45.82.122.235:3030/api/getPosts');
+        const response = await fetch('http://localhost/api/getPosts');
         if(!response.ok) throw Error('Did not recieve expected data');
         const posts = await response.json();
         setPosts(posts);
